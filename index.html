@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aba Home Page - Aba Restaurants</title>
+
+    <!-- external CSS link -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Playfair+Display+SC:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Form styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+</head>
+
+<body>
+
+<!-- Logo and Nav Bar Area -->
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="assets\Images\Aba-Logo-2.png" alt text="aba-restaurant-logo">
+            </div>
+            <ul class="nav-links" >
+                <li><a href="#reserve1" class="first-tab">RESERVE</a></li>
+                <li><a href="#about">MENU</a></li> 
+                <li><a href="#group-dining">GROUP DINING</a></li>
+                <li><a href="#events">EVENTS</a></li>
+                <li><a href="#team" class="last-tab">TEAM</a></li>
+            </ul>
+            <a href="#" class="burger-menu">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </a> 
+        </nav>   
+       
+    </header>
+
+<!-- Hero and Reservation Area -->
+    <main>
+        <!-- Hero Image Section -->
+        <section class="hero">
+            <img class="hero-left" src="assets\Images\up-47-2a.jpg" id="" alt text="aba-salad-and-stuffed-grape-leaves-dishes">
+            <img class="logo-mobile" src="assets\Images\Aba-Logo.png" alt text="aba-logo-mobile-version">
+            <img class= "hero-right" src="assets\Images\Aba_VillageSalad-2.jpg" id="" alt text="aba-village-salad-dish">
+        </section>
+        <!-- Reservation Area -->
+        <section class="reservation-area">
+            <section class="text">
+                <strong><h3 id="reserve1" tabindex="0">MAKE A RESERVATION</h3></strong> 
+            </section>
+            <section class="form-area-1" id="form-1">
+                <form action = "#" id="reserve2" name ="reservation-1" class="grid"> 
+                    <input type="text" name="reservation-date" id="reservation-date" class="form-1-info" placeholder="Reservation Date" required/>
+                    <input type="text" name="reservation-time"  id="reservation-time" class="timepicker form-1-info" placeholder="Reservation Time" required/>
+                    <select name="party-size" id="party-size" class="form-1-info" onchange="getFormOneInfo" required>
+                        <option value=""> Party Size</option>
+                        <option value="1 Person"> 1 Person</option>
+                        <option value="2 People"> 2 People</option>
+                        <option value="3 People"> 3 People</option>
+                        <option value="4 People"> 4 People</option>
+                        <option value="5 People"> 5 People</option>
+                        <option value="6 People"> 6 People</option>
+                        <option value="7 People"> 7 People</option>
+                        <option value="8 People"> 8 People</option>
+                    </select>      
+                    <input type="submit" id="reservation-submit" tabindex="0" value="Find a Table" onclick="getFormOneInfo()" required/>
+                </form>
+            </section>
+            <section class="form-area-2" id="form-2">
+                <form action = "#" class="grid"> 
+                    <input type="text" name = "firstname" id="first-name" class="form-2-info" pattern="[a-zA-Z]*" placeholder="First Name"  title="The name must not include spaces"required/>
+                    <input type="tel" name = "phonenumber"  id="phone-number" class="form-2-info" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="9" placeholder="Phone Number" title="The phone number input must start with a number and use dashes" required/>
+                    <input type="email" name = "email" id="email-address" class="form-2-info" placeholder="Email Address" pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" title="The email input must use this format: name@provider.domain" required/>     
+                    <input type="submit" id="infoSubmit" value="Confirm Table" onclick="getFormTwoInfo()" required/>
+                </form>
+            </section>
+            <section class="form-confirmation" id="form-success">
+            <p>Congrats! Your reservation is now confirmed. Please contact us at 773-645-1400 should have any questions or concerns.</p>
+            </section>
+        </section>
+    </main>
+
+    <!-- Group Dining Info -->
+    <section class="content-1">
+        <img src="assets\Images\up-35-2-resized.jpg" alt text="aba-sweet-corn-dish-close-up-1">
+        <div class="content-1-left" id="group-dining">
+            <h3>GROUP DINING AT ABA</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis laudantium quos molestiae non explicabo soluta! Aut expedita, ipsam ipsa cum dolores exercitationem quaerat, quis rerum corporis quasi facere perferendis eaque reprehenderit animi consequatur pariatur nesciunt itaque fugit minima debitis esse. Nam consequuntur architecto dolor commodi.</p>
+            <button class="main-button">
+                <a href="#">PLAN YOUR PARTY</a>
+            </button>
+        </div>
+    </section>
+
+    <!-- Wine Dining Special Info  -->
+    <section class="content-2">
+        <img src="assets\Images\up-35-3.jpg" alt text="aba-sweet-corn-dish-close-up-2">
+        <div class="content-2-right" id="events">
+            <h3>WINE DINNER</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo dolorum omnis quos eligendi quo sit odit quod, autem quidem! Enim nihil, reprehenderit debitis perferendis distinctio iste quaerat!</p>
+            <span>June 13th, 2018 at 7pm</span>
+            <button class="main-button">
+                <a href="#">LEARN MORE</a>
+            </button>
+        </div>
+    </section>
+
+    <!-- Restaurant Info  -->
+    <section class="content-3">
+        <img src="assets\Images\up-42-2.jpg" alt text="aba-stuffed-grape-leaves-close-up-1">
+        <div class="content-3-left" id="team">
+            <h3>ABOUT ABA</h3>
+            <p>Aba is a restaurant with a rooftop patio located in Chicago's historic Fulton Market District. This is Chef CJ Jacobson's second restaurant with Lettuce Entertain You, and is an extension of Ema (mother in Hebrew) in River North. Aba, meaning father in Hebrew, will incorporate Ema's style of cooking with a larger influence of steak, raw and chilled seafood. The beverage program is crafted by Wine Director Ryan Arnold and Mixologist Liz Pearce and showcases Mediterranean-inspired rare wines and spirits. </p>
+        </div>
+    </section>
+
+    <!-- Important Hours and Contact Info -->
+    <footer>
+        <section class="full-flex">
+            <div class="footer-flex">
+                <h5>HOURS</h5>
+                <span>Tues - Thurs   12pm - 10pm</span>
+                <span>Fri 12pm - 1am</span>
+                <span>Sat 11am - 1am</span>
+                <span>Sun 10am - 9pm</span>
+                <br>
+                <div class="info">
+                    <h5>CONTACT</h5>
+                    <h5>NEWSLETTER</h5>
+                </div>
+            </div>
+            <div class="footer-flex">
+                <h5>LOCATIONS</h5>
+                <span>302 N Green Street,
+                <span>3rd Floor</span>
+                <span>Chicago, IL 60607</span>
+                <span class="tel">773-645-1400</span> 
+            </div>
+        </section>
+        <section class="bottom-nav">
+                <a href="#">FREQUENT DINER</a>
+                <a href="#">GIFT CARDS</a>
+                <a href="#">EMPLOYMENT</a>
+                <a href="#">LEYE.COM</a>
+                <a href="#">TERMS OF USE</a>
+                <a href="#">PRIVACY POLICY</a>
+        </section>
+        <section class="footer-alt hidden">
+            <div class = "bottom-nav-1">
+                <a href="#">FREQUENT DINER</a>
+                <a href="#">GIFT CARDS</a>
+            </div>
+            <div class = "bottom-nav-2">
+                <a href="#">EMPLOYMENT</a>
+                <a href="#">LEYE.COM</a>
+            </div>  
+            <div class = "bottom-nav-3">
+                <a href="#">TERMS OF USE</a>
+                <a href="#">PRIVACY POLICY</a>
+            </div>
+        </section>      
+    </footer>
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</html>

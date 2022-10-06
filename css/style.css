@@ -1,0 +1,1724 @@
+/*******************************************
+/* BASE STYLES
+/*******************************************/
+
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+  
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+}
+
+h3 {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.4825rem;
+    font-weight: 500;
+    letter-spacing: 0.9px; 
+    text-align: center;
+    word-spacing: 5px;
+    margin-top: 2rem;
+    margin-bottom: 1.75rem;
+}
+
+p {
+    font-family:'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.325rem;
+    color: #4e4b46;
+    margin-bottom: 1.5rem;
+}
+
+.main-button {
+    background-color: #012b44;
+    border: #012b44; 
+    padding: 0.475rem 4.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/*******************************************
+/* DESKTOP STYLES
+/*******************************************/
+
+/* HEADER */
+
+body {
+    font-size: 1rem;
+    background-color: #ffff; 
+    background-image: url('../assets/images/white-wood-2.jpeg');
+    background-position: 20% -2%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    align-items: center;
+    column-gap: 0px;
+}
+
+.logo img{
+    height: 158px;
+    width: auto;
+    margin-top: 1.65rem;
+    margin-left: 3.2rem;
+}
+
+.nav-links {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    width: 70%;
+    margin-top: 1rem;
+    margin-right: 2rem;
+    border-top: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+}
+
+.nav-links a {
+    display: block;
+    padding: 0.65rem 0rem;
+    color: #4e4b46;
+    font-family: 'EB Garamond', serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+   
+}
+
+
+.first-tab{
+    margin-left: 2rem;
+}
+
+.last-tab {
+    margin-right: 2rem;
+    
+}
+
+.burger-menu {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 28px;
+}
+
+.burger-menu span {
+    height: 3px;
+    width: 100%;
+    background-color: #848884;
+    border-radius: 10px;
+}
+
+
+/* MAIN */
+
+main {
+    margin-top: 1.85rem;
+    padding-left: 20px;
+    padding-right: 40px;
+}
+
+.hero {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 18px;
+}
+
+.logo-mobile {
+    display: none;
+}
+
+.hero-left {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    object-position: 25% 25%;
+}
+
+.hero-right {
+    width: 61%;
+    height: auto; 
+}
+
+/* Here starts the styling of the reservation area. */
+
+.reservation-area {
+    /* position: relative; */
+    margin: 3rem 0.7rem 2.5rem 3rem;
+    border-top: 1px solid #808080;
+    border-bottom: 1px solid #808080; 
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 255px);
+    grid-gap: 0;
+    justify-content: center;
+    padding-bottom: 2.5rem;
+}
+
+button, input, select, textarea {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+input, select {
+    display: flex;
+    justify-content: center;
+    outline: 1px solid black;
+    border: none;
+    border-radius: 0px;
+    padding: 0.6rem 2rem;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+input:last-child {
+    color: white;
+    font-weight: 300;
+    background-color: #012b44;
+}
+
+/* This is where the styling for the form submissions and confirmation message starts. */
+
+.form-area-1.hidden {
+    display: none;
+}
+
+.form-area-2 {
+    display: none
+}
+
+.form-area-2.active {
+    display: block;
+}
+
+.form-area-2.hidden {
+    display: none;
+}
+
+.form-confirmation {
+    display: none;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    padding-bottom: 3rem;
+    /* border: 2px solid red; */
+}
+
+.form-confirmation.active{
+    display: block;
+}
+
+/* CONTENT-1 */
+
+.content-1 {
+    position: relative;
+    margin-top: 6.5rem;
+    /* border: 2px solid green; */
+}
+
+.content-1-left {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: 26.75rem;
+    margin-left: 4.25rem;
+    padding-right: 3.5rem;
+    border-top: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+}
+
+.content-1 p {
+    display: block;
+    width: 585px;
+    text-align: center;
+}
+
+.content-1 img {
+    position: absolute;
+    width: 390px;
+    height: auto;
+    top: -2.5rem;
+    right: 3.25rem;
+}
+
+button a {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 2px;
+}
+
+/* CONTENT-2 */
+
+
+.content-2 {
+    position: relative;
+    margin-top: 9rem;
+    /* border: 2px solid green; */
+}
+
+.content-2 img {
+    position: absolute;
+    width: 390px;
+    height: auto;
+    top: -3rem;
+    left: 4.25rem;
+}
+
+.content-2-right {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3.25rem;
+    margin-left: 28.5rem;
+    /* padding-right: 3.5rem; */
+    border-top: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+}
+
+.content-2 p {
+    display: block;
+    width: 585px;
+    text-align: center;
+}
+
+.content-2-right span {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #4e4b46;
+    margin-bottom: 1.3rem;
+}
+
+button {
+    padding-left: 4.75rem;
+    padding-right: 4.75rem;
+}
+
+/* CONTENT-3 */
+
+.content-3 {
+    position: relative;
+    margin-top: 6.5rem;
+    /* border: 2px solid green; */
+}
+
+.content-3-left {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: 26.75rem;
+    margin-left: 4.25rem;
+    border-top: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+}
+
+.content-3 p {
+    display: block;
+    width: 585px;
+    text-align: center;
+}
+
+.content-3 img {
+    position: absolute;
+    width: 390px;
+    height: auto;
+    top: -2.5rem;
+    right: 3.25rem;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #654321; 
+    background-image: url('../assets/images/Aba-wood-2.jpg');
+    background-size: cover;
+    background-position: 5% 5%;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
+    padding-top: 4rem;
+    margin-top: 8rem;
+}
+
+.full-flex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    padding-right: 13rem;
+    column-gap: 80px;
+}
+
+.full-flex h5 {
+    font-family:'EB Garamond', sans-serif;
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-size: 1.125rem;
+    margin-bottom: 0.2rem;
+    color: white;
+}
+
+.full-flex span {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 0.2rem;
+    font-size: 1.02rem;
+    letter-spacing: 0.2px;
+    color: white;
+}
+
+.info h5 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    /* border: 2px solid pink; */
+}
+
+.tel {
+    margin-top: 1rem;
+}
+
+.bottom-nav {
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    column-gap: 30px;
+    margin-top: 8rem;
+    padding-bottom: 0.8rem;
+}
+
+.bottom-nav a {
+    font-size: 0.75rem;
+    font-family: 'EB Garamond', serif;
+    font-weight: 500;
+    letter-spacing: 1.2px; 
+    color: white;
+    text-decoration: none;
+}
+
+
+
+/*******************************************
+/* MEDIA QUERIES
+/*******************************************/
+
+/* MOBILE */
+
+@media all and (max-width:315px) {
+     /* HEADER */
+
+     body {
+        overflow-x: hidden;
+        background-position: 50% -2%;
+        /* border: 2px solid blue; */
+    }
+
+    .logo img {
+        display: none;
+    }
+
+    .burger-menu {
+        position: absolute;
+        right: 0.5rem;
+        top: 0.5rem;
+        display: flex;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        margin: 0;
+        right: 0px;
+        top: 0px;
+        width: 100vw;
+        height: 100vh;
+        background-color: #5d4533;
+        opacity:0.8;
+        background-size: cover;
+        z-index: 1;
+    }
+
+    .nav-links ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links a {
+        color: white;
+        padding: 0;
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+        transform: translateX(0%)
+    }
+
+    .first-tab {
+        margin : 0;
+    }
+
+    .last-tab {
+        margin: 0;
+    }
+       
+
+    /* MAIN */
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+
+    main {
+        margin-top: 0rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .hero {
+        display: block;
+        /* border: 2px solid magenta; */
+    }
+
+    .logo-mobile {
+        display: block;
+        position: absolute;
+        height: 80px;
+        width: auto;
+        top: 3%;
+        left: 50%;
+        -ms-transform: translate(-50%, 50%);
+        -webkit-transform: translate(-50%, 50%);
+        transform: translate(-50%, 50%);
+    }
+    
+    .hero-left {
+        display: none;
+    }
+
+    
+    .hero-right {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        opacity: 0.55;
+        
+    }
+    
+    /* Here starts the styling of the reservation area. */
+
+    .reservation-area {
+        margin: 3rem auto;
+        width: 94%;
+        border-top: 1px solid #808080;
+        border-bottom: 1px solid #808080; 
+    }
+    
+    .grid {
+        grid-template-columns: 255px;
+        grid-gap: 20px;
+    }
+    
+    /* CONTENT-1 */
+
+    .content-1  {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        /* border: 2px solid green; */
+    }
+    .content-1 img {
+        position: static;
+        width: 80%;
+        height: auto;
+        margin:  0 auto;
+    }
+
+    .content-1-left {
+        margin: 0;
+        padding: 0;
+        border-top: none;
+    }
+
+    .content-1-left h3 {
+        width: 100%
+    }
+
+    .content-1 p {
+        width: 80%;
+    }
+
+    /* CONTENT-2 */
+
+    .content-2 {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        /* border: 2px solid green; */
+    }
+
+    .content-2 img {
+        position: static;
+        width: 80%;
+        height: auto;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+
+    .content-2-right {
+        margin: 0;
+        padding: 0;
+        border-top: none;
+    }
+
+    .content-2 p {
+        width: 80%;
+    }
+
+    /* CONTENT-3 */
+
+    .content-3 {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 0;
+        /* border: 2px solid green; */
+    }
+
+    .content-3-left {
+        margin: 0;
+        padding: 0;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .content-3 p {
+        width: 80%;
+    }
+
+    .content-3 img {
+        position: static;
+        width: 80%;
+        top: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    /* FOOTER */
+
+    footer {
+        margin-top: 3rem;
+    }
+    
+    .full-flex {
+        flex-flow: column wrap;
+        justify-content: space-around;
+        padding-right: 0;
+        padding-left: 1rem;
+        row-gap: 20px;
+        /* border: 2px solid red; */
+    }
+    
+    .bottom-nav {
+        display: none;
+    }
+
+    .footer-alt {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        column-gap: 30px;
+        margin-top: 20rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        background-color: black;
+        opacity: 0.5;
+    }
+
+    .bottom-nav-1 , .bottom-nav-2, .bottom-nav-3 {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: left;
+    }
+
+    .bottom-nav-1 , .bottom-nav-2 {
+        padding-bottom: 1rem;
+    }
+
+    .bottom-nav-1 a, .bottom-nav-2 a, .bottom-nav-3 a {
+        font-size: 0.75rem;
+        font-family: 'EB Garamond', serif;
+        font-weight: 500;
+        letter-spacing: 1.2px; 
+        text-decoration: none;
+        color: white;
+    }
+}
+
+@media all and (min-width:316px) and (max-width: 449px) {
+
+     /* HEADER */
+
+     body {
+        overflow-x: hidden;
+        background-position: 50% -2%;
+        /* border: 2px solid blue; */
+    }
+
+    .logo img {
+        display: none;
+    }
+
+    .burger-menu {
+        position: absolute;
+        right: 0.5rem;
+        top: 0.5rem;
+        display: flex;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        margin: 0;
+        right: 0px;
+        top: 0px;
+        width: 100vw;
+        height: 100vh;
+        background-color: #5d4533;
+        opacity:0.8;
+        background-size: cover;
+        z-index: 1;
+    }
+
+    .nav-links ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links a {
+        color: white;
+        padding: 0;
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+        transform: translateX(0%)
+    }
+
+    .first-tab {
+        margin : 0;
+    }
+
+    .last-tab {
+        margin: 0;
+    }
+       
+
+    /* MAIN */
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+
+    main {
+        margin-top: 0rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .hero {
+        display: block;
+        /* border: 2px solid magenta; */
+    }
+
+    .logo-mobile {
+        display: block;
+        position: absolute;
+        height: 140px;
+        width: auto;
+        top: 1%;
+        left: 50%;
+        -ms-transform: translate(-50%, 50%);
+        -webkit-transform: translate(-50%, 50%);
+        transform: translate(-50%, 50%);
+    }
+    
+    .hero-left {
+        display: none;
+    }
+
+    
+    .hero-right {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        opacity: 0.55;
+        
+    }
+    
+    /* Here starts the styling of the reservation area. */
+
+    .reservation-area {
+        margin: 3rem auto;
+        width: 94%;
+        border-top: 1px solid #808080;
+        border-bottom: 1px solid #808080; 
+    }
+    
+    .grid {
+        grid-template-columns: 255px;
+        grid-gap: 20px;
+    }
+    
+    /* CONTENT-1 */
+
+    .content-1  {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        /* border: 2px solid green; */
+    }
+    .content-1 img {
+        position: static;
+        width: 80%;
+        height: auto;
+        margin:  0 auto;
+    }
+
+    .content-1-left {
+        margin: 0;
+        padding: 0;
+        border-top: none;
+    }
+
+    .content-1-left h3 {
+        width: 100%
+    }
+
+    .content-1 p {
+        width: 80%;
+    }
+
+    /* CONTENT-2 */
+
+    .content-2 {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        /* border: 2px solid green; */
+    }
+
+    .content-2 img {
+        position: static;
+        width: 80%;
+        height: auto;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+
+    .content-2-right {
+        margin: 0;
+        padding: 0;
+        border-top: none;
+    }
+
+    .content-2 p {
+        width: 80%;
+    }
+
+    /* CONTENT-3 */
+
+    .content-3 {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 0;
+        /* border: 2px solid green; */
+    }
+
+    .content-3-left {
+        margin: 0;
+        padding: 0;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .content-3 p {
+        width: 80%;
+    }
+
+    .content-3 img {
+        position: static;
+        width: 80%;
+        top: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    /* FOOTER */
+
+    footer {
+        margin-top: 3rem;
+    }
+    
+    .full-flex {
+        justify-content: space-around;
+        padding-right: 0;
+        padding-left: 1rem;
+        column-gap: 10px;
+        /* border: 2px solid red; */
+    }
+    
+    
+    .bottom-nav {
+        display: none;
+    }
+
+    .footer-alt {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        column-gap: 30px;
+        margin-top: 20rem;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        background-color: black;
+        opacity: 0.5;
+    }
+
+    .bottom-nav-1 , .bottom-nav-2, .bottom-nav-3 {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: left;
+
+    }
+
+    .bottom-nav-1 a, .bottom-nav-2 a, .bottom-nav-3 a {
+        font-size: 0.75rem;
+        font-family: 'EB Garamond', serif;
+        font-weight: 500;
+        letter-spacing: 1.2px; 
+        text-decoration: none;
+        color: white;
+    }
+}    
+
+@media all and (min-width: 450px) and (max-width: 610px) {
+
+   /* HEADER */
+
+   body {
+    overflow-x: hidden;
+    background-position: 50% -2%;
+    /* border: 2px solid blue; */
+    }
+
+    .logo img {
+        display: none;
+    }
+
+    .burger-menu {
+        position: absolute;
+        right: 0.5rem;
+        top: 0.5rem;
+        display: flex;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        margin: 0;
+        right: 0px;
+        top: 0px;
+        width: 100vw;
+        height: 100vh;
+        background-color: #5d4533;
+        opacity:0.8;
+        background-size: cover;
+        z-index: 1;
+    }
+
+    .nav-links ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links a {
+        color: white;
+        padding: 0;
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+        transform: translateX(0%)
+    }
+
+    .first-tab {
+        margin : 0;
+    }
+
+    .last-tab {
+        margin: 0;
+    }
+    
+
+    /* MAIN */
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+
+    main {
+        margin-top: 0rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .hero {
+        display: block;
+        /* border: 2px solid magenta; */
+    }
+
+    .logo-mobile {
+        display: block;
+        position: absolute;
+        height: 170px;
+        width: auto;
+        top: 4%;
+        left: 50%;
+        -ms-transform: translate(-50%, 50%);
+        -webkit-transform: translate(-50%, 50%);
+        transform: translate(-50%, 50%);
+    }
+
+    .hero-left {
+        display: none;
+    }
+
+
+    .hero-right {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        opacity: 0.55;
+        
+    }
+
+    /* Here starts the styling of the reservation area. */
+
+    .reservation-area {
+        margin: 3rem auto;
+        width: 94%;
+        border-top: 1px solid #808080;
+        border-bottom: 1px solid #808080; 
+    }
+
+    .grid {
+        grid-template-columns: 255px;
+        grid-gap: 20px;
+    }
+
+    /* CONTENT-1 */
+
+    .content-1  {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        /* border: 2px solid green; */
+    }
+    .content-1 img {
+        position: static;
+        width: 80%;
+        height: auto;
+        margin:  0 auto;
+    }
+
+    .content-1-left {
+        margin: 0;
+        padding: 0;
+        border-top: none;
+    }
+
+    .content-1-left h3 {
+        width: 100%
+    }
+
+    .content-1 p {
+        width: 80%;
+    }
+
+    /* CONTENT-2 */
+
+    .content-2 {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        /* border: 2px solid green; */
+    }
+
+    .content-2 img {
+        position: static;
+        width: 80%;
+        height: auto;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+
+    .content-2-right {
+        margin: 0;
+        padding: 0;
+        border-top: none;
+    }
+
+    .content-2 p {
+        width: 80%;
+    }
+
+    /* CONTENT-3 */
+
+    .content-3 {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 0;
+        /* border: 2px solid green; */
+    }
+
+    .content-3-left {
+        margin: 0;
+        padding: 0;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .content-3 p {
+        width: 80%;
+    }
+
+    .content-3 img {
+        position: static;
+        width: 80%;
+        top: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    /* FOOTER */
+
+    footer {
+        margin-top: 3rem;
+    }
+
+    .full-flex {
+        justify-content: space-around;
+        padding-right: 0;
+        column-gap: 10px;
+        /* border: 2px solid red; */
+    }
+
+
+    .bottom-nav {
+        display: none;
+    }
+
+    .footer-alt {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        column-gap: 30px;
+        margin-top: 20rem;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        background-color: black;
+        opacity: 0.5;
+    }
+
+    .bottom-nav-1 , .bottom-nav-2, .bottom-nav-3 {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: left;
+
+    }
+
+    .bottom-nav-1 a, .bottom-nav-2 a, .bottom-nav-3 a {
+        font-size: 0.75rem;
+        font-family: 'EB Garamond', serif;
+        font-weight: 500;
+        letter-spacing: 1.2px; 
+        text-decoration: none;
+        color: white;
+    }
+}
+
+@media all and (min-width: 611px) and (max-width: 768px) {
+    /* HEADER */
+
+    body {
+        overflow-x: hidden;
+        background-position: 50% -2%;
+        /* border: 2px solid blue; */
+    }
+
+    .logo img {
+        display: none;
+    }
+
+    .burger-menu {
+        position: absolute;
+        right: 1.5rem;
+        top: 0.8rem;
+        display: flex;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        margin: 0;
+        right: 0px;
+        top: 0px;
+        width: 100vw;
+        height: 100vh;
+        background-color: #5d4533;
+        opacity:0.8;
+        background-size: cover;
+        z-index: 1;
+    }
+
+    .nav-links ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links a {
+        color: white;
+        padding: 0;
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+        transform: translateX(0%)
+    }
+
+    .first-tab {
+        margin : 0;
+    }
+
+    .last-tab {
+        margin: 0;
+    }
+       
+
+    /* MAIN */
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+
+    main {
+        margin-top: 0rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .hero {
+        display: block;
+        /* border: 2px solid magenta; */
+    }
+
+    .logo-mobile {
+        display: block;
+        position: absolute;
+        height: 250px;
+        width: auto;
+        top: 2%;
+        left: 50%;
+        -ms-transform: translate(-50%, 50%);
+        -webkit-transform: translate(-50%, 50%);
+        transform: translate(-50%, 50%);
+    }
+    
+    .hero-left {
+        display: none;
+    }
+
+    
+    .hero-right {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        opacity: 0.55;
+        
+    }
+    
+    /* Here starts the styling of the reservation area. */
+
+    .reservation-area {
+        margin: 3rem auto;
+        width: 94%;
+        border-top: 1px solid #808080;
+        border-bottom: 1px solid #808080; 
+    }
+    
+    .grid {
+        grid-template-columns: 255px;
+        grid-gap: 20px;
+    }
+    
+    /* CONTENT-1 */
+
+    .content-1  {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        /* border: 2px solid green; */
+    }
+    .content-1 img {
+        position: static;
+        width: 80%;
+        height: auto;
+        margin:  0 auto;
+    }
+
+    .content-1-left {
+        margin: 0;
+        padding: 0;
+        border-top: none;
+    }
+
+    .content-1-left h3 {
+        width: 100%
+    }
+
+    .content-1 p {
+        width: 80%;
+    }
+
+    /* CONTENT-2 */
+
+    .content-2 {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        /* border: 2px solid green; */
+    }
+
+    .content-2 img {
+        position: static;
+        width: 80%;
+        height: auto;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+
+    .content-2-right {
+        margin: 0;
+        padding: 0;
+        border-top: none;
+    }
+
+    .content-2 p {
+        width: 80%;
+    }
+
+    /* CONTENT-3 */
+
+    .content-3 {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 0;
+        /* border: 2px solid green; */
+    }
+
+    .content-3-left {
+        margin: 0;
+        padding: 0;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .content-3 p {
+        width: 80%;
+    }
+
+    .content-3 img {
+        position: static;
+        width: 80%;
+        top: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    /* FOOTER */
+
+    footer {
+        margin-top: 3rem;
+    }
+    
+    .full-flex {
+        justify-content: space-around;
+        padding-right: 0;
+        column-gap: 10px;
+        /* border: 2px solid red; */
+    }
+    
+    
+    .bottom-nav {
+        display: none;
+    }
+
+    .footer-alt {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        column-gap: 30px;
+        margin-top: 20rem;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        background-color: black;
+        opacity: 0.5;
+    }
+
+    .bottom-nav-1 , .bottom-nav-2, .bottom-nav-3 {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: left;
+
+    }
+
+    .bottom-nav-1 a, .bottom-nav-2 a, .bottom-nav-3 a {
+        font-size: 0.75rem;
+        font-family: 'EB Garamond', serif;
+        font-weight: 500;
+        letter-spacing: 1.2px; 
+        text-decoration: none;
+        color: white;
+    }
+      
+    
+}
+
+/* TABLET */
+
+@media all and (min-width:769px) and (max-width: 1030px) {
+    
+    /* HEADER */
+
+    body {
+        background-position: 20% 15%;
+        /* background-position: 20% -2%; */
+    }
+
+    .nav-bar {
+        width: 100%;
+    }
+
+    .logo img{
+        height: 128px;
+        width: auto;
+        margin-top: 1.65rem;
+        margin-left: 3.2rem;
+    }
+
+
+    /* MAIN */
+
+    main {
+        margin-top: 1.85rem;
+        padding-left: 20px;
+        padding-right: 40px;
+    }
+
+    .hero {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        column-gap: 18px;
+    }
+
+    .logo-mobile {
+        display: none;
+    }
+
+    .hero-left {
+        width: 40%;
+        height: auto;
+        object-fit: cover;
+        object-position: 25% 25%;
+    }
+
+    .hero-right {
+        width: 61%;
+        height: auto; 
+    }
+
+    /* Here starts the styling of the reservation area. */
+
+    .reservation-area {
+        /* position: relative; */
+        margin: 3rem auto;
+        border-top: 1px solid #808080;
+        border-bottom: 1px solid #808080; 
+    }
+
+    .grid {
+        grid-template-columns: repeat(4, 200px);
+    }
+
+    /* CONTENT-1 */
+
+    .content-1  {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        /* border: 2px solid green; */
+    }
+    .content-1 img {
+        position: static;
+        width: 50%;
+        height: auto;
+        margin:  0 auto;
+    }
+
+    .content-1-left {
+        margin: 0;
+        padding: 0;
+        border-top: none;
+    }
+
+    .content-1-left h3 {
+        width: 100%
+    }
+
+    .content-1 p {
+        width: 80%;
+    }
+
+    /* CONTENT-2 */
+
+    .content-2 {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        /* border: 2px solid green; */
+    }
+
+    .content-2 img {
+        position: static;
+        width: 50%;
+        height: auto;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+
+    .content-2-right {
+        margin: 0;
+        padding: 0;
+        border-top: none;
+    }
+
+    .content-2 p {
+        width: 80%;
+    }
+
+    /* CONTENT-3 */
+
+    .content-3 {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 0;
+        /* border: 2px solid green; */
+    }
+
+    .content-3-left {
+        margin: 0;
+        padding: 0;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .content-3 p {
+        width: 80%;
+    }
+
+    .content-3 img {
+        position: static;
+        width: 50%;
+        top: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        background-color: #654321; 
+        background-image: url('../assets/images/Aba-wood-2.jpg');
+        background-size: cover;
+        background-position: 5% 5%;
+        box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
+        padding-top: 4rem;
+        margin-top: 8rem;
+    }
+
+    .full-flex {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: end;
+        padding-right: 13rem;
+        column-gap: 80px;
+    }
+
+    .full-flex h5 {
+        font-family:'EB Garamond', sans-serif;
+        font-weight: 500;
+        letter-spacing: 3px;
+        font-size: 1.125rem;
+        margin-bottom: 0.2rem;
+        color: white;
+    }
+
+    .full-flex span {
+        display: block;
+        font-family: 'Lato', sans-serif;
+        margin-bottom: 0.2rem;
+        font-size: 1.02rem;
+        letter-spacing: 0.2px;
+        color: white;
+    }
+
+    .info h5 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-weight: 500;
+        letter-spacing: 3px;
+        /* border: 2px solid pink; */
+    }
+
+    .tel {
+        margin-top: 1rem;
+    }
+
+    .bottom-nav {
+        display:flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        column-gap: 30px;
+        margin-top: 8rem;
+        padding-bottom: 0.8rem;
+    }
+
+    .bottom-nav a {
+        font-size: 0.75rem;
+        font-family: 'EB Garamond', serif;
+        font-weight: 500;
+        letter-spacing: 1.2px; 
+        color: white;
+        text-decoration: none;
+    }
+
+}
